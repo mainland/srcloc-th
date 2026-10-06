@@ -1,0 +1,64 @@
+name:           srcloc-th
+version:        0.1.0.0
+cabal-version:  >= 1.10
+license:        BSD3
+license-file:   LICENSE
+copyright:      (c) 2026 Geoffrey Mainland
+author:         Geoffrey Mainland <mainland@drexel.edu>
+maintainer:     Geoffrey Mainland <mainland@drexel.edu>
+stability:      experimental
+homepage:       https://github.com/mainland/srcloc-th
+category:       Data
+synopsis:       Template Haskell derivation of source-location instances.
+description:    Derive shallow Located and Relocatable instances for datatypes
+                with direct SrcLoc fields, without payload constraints or a
+                runtime generic representation.
+tested-with:    GHC==8.0.2,
+                GHC==8.2.2,
+                GHC==8.4.3,
+                GHC==8.6.5,
+                GHC==8.8.4,
+                GHC==8.10.7,
+                GHC==9.0.2,
+                GHC==9.2.2,
+                GHC==9.4.8,
+                GHC==9.6.4,
+                GHC==9.8.2,
+                GHC==9.10.1,
+                GHC==9.12.2,
+                GHC==9.14.1
+build-type:     Simple
+
+extra-source-files:
+  CHANGELOG.md
+  README.md
+  .stylish-haskell.yaml
+
+library
+  hs-source-dirs: src
+  exposed-modules: Data.Loc.TH
+  build-depends:
+    base             >= 4.9  && < 5,
+    srcloc           >= 0.4  && < 0.8,
+    template-haskell >= 2.11 && < 2.25
+  default-language: Haskell2010
+  ghc-options: -Wall
+
+test-suite srcloc-th-tests
+  type: exitcode-stdio-1.0
+  hs-source-dirs: tests
+  main-is: Main.hs
+  other-modules: Fixtures
+  build-depends:
+    base             >= 4.9  && < 5,
+    srcloc           >= 0.4  && < 0.8,
+    srcloc-th,
+    tasty            >= 1.4  && < 1.6,
+    tasty-hunit      >= 0.10 && < 0.11,
+    template-haskell >= 2.11 && < 2.25
+  default-language: Haskell2010
+  ghc-options: -Wall
+
+source-repository head
+  type: git
+  location: https://github.com/mainland/srcloc-th.git
