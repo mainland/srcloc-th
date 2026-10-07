@@ -6,8 +6,9 @@ license-file:   LICENSE
 copyright:      (c) 2026 Geoffrey Mainland
 author:         Geoffrey Mainland <mainland@drexel.edu>
 maintainer:     Geoffrey Mainland <mainland@drexel.edu>
-stability:      experimental
+stability:      stable
 homepage:       https://github.com/mainland/srcloc-th
+bug-reports:    https://github.com/mainland/srcloc-th/issues
 category:       Data
 synopsis:       Template Haskell derivation of source-location instances.
 description:    Derive shallow Located and Relocatable instances for datatypes
