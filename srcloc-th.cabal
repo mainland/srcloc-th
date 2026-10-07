@@ -38,9 +38,9 @@ library
   hs-source-dirs: src
   exposed-modules: Data.Loc.TH
   build-depends:
-    base             >= 4.9  && < 5,
-    srcloc           >= 0.4  && < 0.8,
-    template-haskell >= 2.11 && < 2.25
+    base             >= 4.9     && < 5,
+    srcloc           >= 0.5.1.2 && < 1.1,
+    template-haskell >= 2.11    && < 2.25
   default-language: Haskell2010
   ghc-options: -Wall
 
@@ -50,12 +50,12 @@ test-suite srcloc-th-tests
   main-is: Main.hs
   other-modules: Fixtures, Shadowing
   build-depends:
-    base             >= 4.9  && < 5,
-    srcloc           >= 0.4  && < 0.8,
+    base             >= 4.9     && < 5,
+    srcloc           >= 0.5.1.2 && < 1.1,
     srcloc-th,
-    tasty            >= 1.4  && < 1.6,
-    tasty-hunit      >= 0.10 && < 0.11,
-    template-haskell >= 2.11 && < 2.25
+    tasty            >= 1.4     && < 1.6,
+    tasty-hunit      >= 0.10    && < 0.11,
+    template-haskell >= 2.11    && < 2.25
   default-language: Haskell2010
   ghc-options: -Wall
 
