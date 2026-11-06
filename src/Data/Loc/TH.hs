@@ -16,8 +16,9 @@
 -- location. Datatype field strictness still applies when rebuilding a node.
 --
 -- Put the splice after the datatype declarations and before declarations that
--- use the derived instances. The derivation functions must be imported from
--- this module because of Template Haskell's stage restriction.
+-- use the derived instances. Template Haskell's stage restriction prevents a
+-- splice from using functions defined in the same module, so the module that
+-- contains the splice must import the derivation functions.
 --
 -- > data Node = Node String SrcLoc | Empty
 -- > $(deriveLocatedAndRelocatable ''Node)
