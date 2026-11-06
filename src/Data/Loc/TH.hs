@@ -192,9 +192,11 @@ relocatableInstance typ constructors =
         [funD 'Loc.reloc clauses]
   where
     clauses
-        | null constructors = [clause [wildP, varP node] (normalB (varE node)) []]
+        | null constructors = [emptyClause]
         | otherwise         = map relocatableClause constructors
-    node = mkName "node"
+    emptyClause = do
+        node <- newName "node"
+        clause [wildP, varP node] (normalB (varE node)) []
 
 relocatableClause :: Constructor -> Q Clause
 relocatableClause (Constructor name arity Nothing)         = do

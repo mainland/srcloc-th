@@ -48,7 +48,7 @@ test-suite srcloc-th-tests
   type: exitcode-stdio-1.0
   hs-source-dirs: tests
   main-is: Main.hs
-  other-modules: Fixtures
+  other-modules: Fixtures, Shadowing
   build-depends:
     base             >= 4.9  && < 5,
     srcloc           >= 0.4  && < 0.8,

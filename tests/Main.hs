@@ -6,6 +6,7 @@ import           Control.Exception (ErrorCall, displayException, evaluate, try)
 import           Data.List         (isInfixOf)
 import           Data.Loc
 import           Fixtures
+import           Shadowing         ()
 import           Test.Tasty        (defaultMain, testGroup)
 import           Test.Tasty.HUnit  (assertBool, testCase, (@?=))
 
