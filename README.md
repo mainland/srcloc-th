@@ -17,8 +17,8 @@ $(deriveLocatedAndRelocatable ''Node)
 ```
 
 See the `Data.Loc.TH` Haddock documentation for the field-selection policy,
-supported declarations, laziness guarantees, and compile-time failures.
-The package supports GHC 8.0 and later.
+supported declarations, laziness guarantees, and compile-time failures. The
+package supports GHC 8.0 through 9.14.
 
 Build and test with Cabal:
 
