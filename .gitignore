@@ -1,6 +1,4 @@
 /dist/
 dist-newstyle
 .ghc.environment.*
-/AGENTS.md
-/notes/
 /cabal.project.local
