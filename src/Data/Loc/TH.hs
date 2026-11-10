@@ -28,6 +28,11 @@
 -- constant location lookup and identity relocation. Derivation fails for
 -- constructors with multiple direct locations, datatype contexts, and targets
 -- other than ordinary datatypes or newtypes, including data families.
+--
+-- The generated methods match on every constructor. With GHC 9.2 and earlier,
+-- a match on a GADT constructor whose result type refines a type parameter
+-- needs @GADTs@ or @TypeFamilies@ in the module that contains the splice, even
+-- when the datatype is declared in another module.
 module Data.Loc.TH
     ( deriveLocated
     , deriveRelocatable
