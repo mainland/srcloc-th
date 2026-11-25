@@ -9,6 +9,11 @@
 -- A type-variable field remains a payload even when instantiated to
 -- 'Loc.SrcLoc'. Type families are not reduced.
 --
+-- GHC omits invisible type arguments from reified field types. When the
+-- expansion depends on one of those arguments, use a synonym with a visible
+-- parameter, such as @type Alias a = a@ with a field of type @Alias SrcLoc@,
+-- or declare the field as 'Loc.SrcLoc' directly.
+--
 -- The generated methods do not require instances for payload types. They inspect
 -- the outer constructor without forcing lazy payload fields. Relocation
 -- replaces only the constructor's own location. Constructors without a location
