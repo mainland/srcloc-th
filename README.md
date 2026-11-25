@@ -27,3 +27,9 @@ cabal build all
 cabal test all --test-show-details=direct
 cabal haddock all
 ```
+
+## AI assistance
+
+Version `1.0.0` is this package's first release. AI tools were used in its
+development, review, and release preparation. The maintainer remains
+responsible for this release.
